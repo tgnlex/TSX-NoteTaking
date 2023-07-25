@@ -22,4 +22,6 @@ export type NoteData = {
   id: string
   label: string
 }
-
+export type NoteProps = {
+  onDelete: (id: string) => void
+}
