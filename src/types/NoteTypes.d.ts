@@ -1,12 +1,12 @@
-type Note = {
+export type Note = {
   id: string
 } & NoteData
 
-type RawNote = {
+export type RawNote = {
   id: string;
 } & RawNoteData
 
-type RawNoteData = {
+export type RawNoteData = {
   title: string
   markdown: string
   tagIds: string[]
@@ -18,18 +18,8 @@ export type NoteData = {
   tags: Tag[]
 }
 
-export type Tag = {
+ export type Tag = {
   id: string
   label: string
 }
 
- const MainTypes = {
-    Tag, 
-    RawNote
-    Note,
-    NoteData,
-    RawNoteData,
-    RawNoteData,
-}
-
-export default MainTypes;
