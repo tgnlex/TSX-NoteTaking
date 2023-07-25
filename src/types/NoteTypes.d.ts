@@ -13,8 +13,8 @@ export type RawNoteData = {
 }
 
 export type NoteData = {
-  title: string
-  markdown: string
+  title: string | undefined
+  markdown: string | undefined
   tags: Tag[]
 }
 

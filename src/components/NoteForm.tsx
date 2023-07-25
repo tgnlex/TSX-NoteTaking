@@ -1,5 +1,6 @@
 import {FormEvent, useRef, useState} from 'react'
 import {Col, Button , Form, Row, Stack} from 'react-bootstrap'
+import {Link} from 'react-router-dom';
 import CreatableReactSelect  from 'react-select/creatable'
 import NoteFormProps from '../types/NoteFormTypes'
 import {Tag} from '../types/NoteTypes'
@@ -63,7 +64,7 @@ function NoteForm({ onSubmit, onAddTag, availableTags }: NoteFormProps) {
           </Form.Group>
           <Stack direction="horizontal" gap={2} className="justify-content-end">
             <Button type="submit" variant="primary">Save</Button>
-            <Button type="button" variant="outline-secondary">Cancel</Button>
+            <Button type="button" variant="outline-secondary"><Link to="/">Cancel</Link></Button>
           </Stack>
       </Stack>
     </Form>
