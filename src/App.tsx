@@ -8,6 +8,8 @@ import NewNote from './components/NewNote';
 import useLocalStorage from './api/useLocalStorage';
 import {Tag, NoteData, RawNote} from './types/NoteTypes';
 import {v4 as uuidV4} from 'uuid';
+import {NoteLayout} from './components/NoteLayout';
+import Note from './components/Note';
 
 
 function App() {
@@ -47,7 +49,8 @@ function App() {
               /> 
             }
         />
-        <Route path="/:id" element={<h1>Show</h1>} />
+        <Route path="/:id" element={<NoteLayout notes={notesWithTags} />}  />
+        <Route index element={<Note />} />
         <Route path="/edit" element={<h1>Edit</h1>} />
         <Route path="/" element={<Navigate to="/" />}/>
       </Routes>
